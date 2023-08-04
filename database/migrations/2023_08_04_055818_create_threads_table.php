@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('threads', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("title");
+            $table->text("body");
         });
     }
 

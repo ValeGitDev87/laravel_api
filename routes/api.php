@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('v1/threads',[App\Http\Controllers\Api\V1\ThreadController::class,'index']);
+//! usando la creazione  Route in questo modo non dovranno essere definite ne le atre rotte ne
+//! ne l'accopiata Controller Metodo;
+Route::apiResource('v1/threads',\App\Http\Controllers\Api\V1\ThreadController::class);
 
